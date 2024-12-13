@@ -45,7 +45,7 @@ export default function Header() {
           width={60}
           src="https://static.fotor.com/app/features/img/step_new/features/4-pet.png"
         />
-
+        <div className="text-3xl text-semibold">BOOKING MOVIE TICKET</div>
         <div className="flex items-center">
           <Dropdown
             menu={{

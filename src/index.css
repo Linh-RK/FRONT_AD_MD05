@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollable-sidebar {
+  overflow-y: auto;
+  height: calc(100vh - 65px); /* Adjust this based on your header height */
+}

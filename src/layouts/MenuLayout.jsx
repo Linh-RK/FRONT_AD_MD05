@@ -4,7 +4,6 @@ import {
   FileOutlined,
   PieChartOutlined,
   TeamOutlined,
-  UserOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import { NavLink } from "react-router-dom";
@@ -19,11 +18,23 @@ function getItem(label, key, icon, children) {
 }
 const items = [
   getItem(<NavLink to="/admin">Dashboard</NavLink>, "1", <PieChartOutlined />),
-  
+
   getItem("Manager", "sub1", <DesktopOutlined />, [
-    getItem(<NavLink to="/admin/category">Category</NavLink>, "3"),
-    getItem(<NavLink to="/admin/product">Product</NavLink>, "4"),
-    getItem("Alex", "5"),
+    getItem(<NavLink to="/admin">Dash Board</NavLink>, "4"),
+    getItem(<NavLink to="/admin/banner">Banner</NavLink>, "5"),
+    getItem(<NavLink to="/admin/booking">Booking</NavLink>, "6"),
+    getItem(<NavLink to="/admin/categories">Category</NavLink>, "7"),
+    getItem(<NavLink to="/admin/cinema">Cinema</NavLink>, "8"),
+    getItem(<NavLink to="/admin/comment">Comment</NavLink>, "9"),
+    getItem(<NavLink to="/admin/festival">Festival</NavLink>, "10"),
+    getItem(<NavLink to="/admin/movie">Movie</NavLink>, "11"),
+    getItem(<NavLink to="/admin/news">News</NavLink>, "12"),
+    getItem(<NavLink to="/admin/payment">Payment</NavLink>, "13"),
+    getItem(<NavLink to="/admin/room">Room</NavLink>, "14"),
+    getItem(<NavLink to="/admin/seat">Seat</NavLink>, "15"),
+    getItem(<NavLink to="/admin/showtime">Showtime</NavLink>, "16"),
+    getItem(<NavLink to="/admin/snack">Snack</NavLink>, "17"),
+    getItem(<NavLink to="/admin/ticket-price">Ticket</NavLink>, "18"),
   ]),
   getItem("Team", "sub2", <TeamOutlined />, [
     getItem("Team 1", "6"),
@@ -50,6 +61,7 @@ export default function MenuLayout() {
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={items}
+          className="scrollable-sidebar"
         />
       </Sider>
     </>
